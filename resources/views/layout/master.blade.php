@@ -11,9 +11,13 @@
 </head>
 
 <body>
-    @include('partials.navbar')
-    @yield('content')
 
+    @include('partials.navbar')
+    <div class="container mt-4">
+        @include('partials.alert')
+        @yield('content')
+    </div>
+    @include('partials.footer')
     @vite('resources/js/app.js')
     @stack('scripts')
 </body>
