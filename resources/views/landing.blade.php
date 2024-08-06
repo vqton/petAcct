@@ -20,33 +20,16 @@
     <section id="services" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Tax Preparation</h5>
-                            <p class="card-text">Expert tax preparation services to ensure you maximize your returns and
-                                stay compliant with tax laws.</p>
+                @foreach ($services as $service)
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $service->title }}</h5>
+                                <p class="card-text">{{ $service->description }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Financial Planning</h5>
-                            <p class="card-text">Comprehensive financial planning services to help you achieve your
-                                long-term financial goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Bookkeeping</h5>
-                            <p class="card-text">Accurate and efficient bookkeeping services to keep your financial records
-                                up-to-date and organized.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
