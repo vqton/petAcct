@@ -10,7 +10,8 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::all();
-        return view('services.index', compact('services'));
+        // return view('services.index', compact('services'));
+        return view('services.index', compact('services'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     public function create()

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layout.master')
 
 @section('title', 'Services')
 
@@ -8,12 +8,6 @@
         <h1>Services</h1>
         <a class="btn btn-primary" href="{{ route('services.create') }}">Add Service</a>
     </div>
-
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
 
     <table class="table table-bordered">
         <thead>
@@ -25,6 +19,7 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 0; @endphp
             @foreach ($services as $service)
             <tr>
                 <td>{{ ++$i }}</td>
