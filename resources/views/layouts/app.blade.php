@@ -20,10 +20,13 @@
 </head>
 
 <body>
+    <header>
+    @include('partials.navbar')
+</header>
     <div id="app">
-        @include('partials.navbar')
+        
 
-        <main class="py-4">
+        <main  style="padding-top: 0;">
             @include('partials.alert')
             @yield('content')
         </main>
